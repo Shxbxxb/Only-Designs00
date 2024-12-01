@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyDesigns - Paid Assignments</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(45deg, #6a0dad, #8b00ff);
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            position: relative;
+            z-index: 2;
+        }
+
+        header .logo {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%) rotate(0);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            animation: spinLogo 8s linear infinite;
+        }
+
+        @keyframes spinLogo {
+            from {
+                transform: translateX(-50%) rotate(0deg);
+            }
+            to {
+                transform: translateX(-50%) rotate(360deg);
+            }
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 10px 0 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1em;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f0e68c;
+        }
+
+        /* Section */
+        section {
+            padding: 20px;
+            margin: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #6a0dad;
+        }
+
+        /* Products */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product {
+            text-align: center;
+            border: 1px solid #6a0dad;
+            border-radius: 10px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            transition: transform 0.5s;
+        }
+
+        .product:hover {
+            transform: rotateY(15deg);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #6a0dad;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: ease-in 0.3s;
+        }
+
+        .product a:hover {
+            background: #5e0c9e;
+        }
+
+        /* FAQ Section */
+        .faq {
+            margin-top: 30px;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+        }
+
+        .faq-question {
+            background: #6a0dad;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .faq-question::after {
+            content: '\f078';
+            font-family: "Font Awesome 5 Free";
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 10px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        /* Chatbot */
+        .chatbot {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #6a0dad;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        .chatbot i {
+            color: white;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body><header>
+    <div style="text-align: center;">
+        <img src="c:\Users\Shabeeb Siddiqui\Desktop\OnlyDesigns Website\Pictures\SharedScreenshot.jpg" alt="OnlyDesigns Logo" style="width: 120px; height: auto; border-radius: 50%; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
+    </div>
+    <h1>Welcome to OnlyDesigns</h1>
+    <p>Your trusted partner for assignments.</p>
+    <nav>
+        <ul>
+            <li><a href="past-products.html">Testimonials</a></li>
+            <li><a href="UNICEF.html">Happy Customers</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="c:\Users\Shabeeb Siddiqui\Desktop\OnlyDesigns Website\Pictures\WhatsApp Image 2024-11-30 at 1.04.36 AM.jpeg" alt="Product 1">
+                <h2> Basic Plan</h2><h2><s>RS 160</s></h2><h3> RS 129</h3>
+                <a href="https://wa.me/916396600507
+">Know More</a>
+            </div>
+            <div class="product">
+                <img src="c:\Users\Shabeeb Siddiqui\Desktop\OnlyDesigns Website\Pictures\WhatsApp Image 2024-11-30 at 1.04.31 AM.jpeg" alt="Product 2">
+                <h2> Luxury Plan</h2><h2><s>RS 250</s></h2><h3> RS 209</h3>
+                <a href="https://wa.me/916396600507
+">Know More</a>
+            </div>
+            <div class="product">
+                <img src="c:\Users\Shabeeb Siddiqui\Desktop\OnlyDesigns Website\Pictures\WhatsApp Image 2024-11-30 at 1.04.30 AM.jpeg" alt="Product 3">
+                <h2> Premium Plan</h2><h2><s>RS 270</s></h2><h3> RS 239</h3>
+                <a href="https://wa.me/916396600507
+">Know More</a>
+            </div>
+            <div class="product">
+                <img src="c:\Users\Shabeeb Siddiqui\Desktop\OnlyDesigns Website\Pictures\Colorful Minimalist Linear Steps Circular Diagram (1).png" alt="Product 4">
+                <h2> Online One Pager</h2><h2><s>RS 139</s></h2><h3> RS 99</h3>
+                <a href="https://wa.me/916396600507
+">Know More</a>
+            </div>
+            <div class="product">
+                <img src="c:\Users\Shabeeb Siddiqui\Desktop\OnlyDesigns Website\New\SharedScreenshot.jpg" alt="Product 5">
+                <h2> Power Point Presentation</h2><h2><s>RS 180 + 25-/</s></h2><h3> RS 149 + 19-/</h3>
+                <a href="https://wa.me/916396600507
+">Know More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <div class="faq-question">What is OnlyDesigns?</div>
+            <div class="faq-answer">OnlyDesigns provides high-quality assignment services for students and professionals.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How can I contact you?</div>
+            <div class="faq-answer">You can reach us via WhatsApp for any inquiries.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">What is the payment process?</div>
+            <div class="faq-answer">Half Payment Before Shipping And Half After Receiving For Security Purposes!.</div>
+        </div>
+    </section>
+
+    <div class="chatbot" id="chatbot">
+        <i class="fas fa-robot"></i>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 OnlyDesigns. All Rights Reserved.</p>
+    </footer>
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+
+        // Chatbot
+        document.getElementById('chatbot').addEventListener('click', () => {
+            alert("Having Trouble? Contact Us!");
+        });
+    </script>
+</body>
+</html>
