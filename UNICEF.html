@@ -1,3 +1,4 @@
+UNICEF
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,7 +53,6 @@
             padding: 15px;
             border-radius: 5px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: relative;
         }
 
         .testimonial p {
@@ -67,21 +67,20 @@
             color: #6a0dad;
         }
 
-        .delete-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #ff4d4d;
-            color: white;
-            border: none;
-            padding: 5px 10px;
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background: #6a0dad;
+            color: #ffffff;
+            text-decoration: none;
             border-radius: 5px;
-            cursor: pointer;
-            font-size: 0.9em;
+            transition: background 0.3s;
         }
 
-        .delete-btn:hover {
-            background: #ff1a1a;
+        .back-link:hover {
+            background: #5e0c9e;
         }
 
         footer {
@@ -99,73 +98,34 @@
     </header>
 
     <section>
-        <h2>Know Us</h2>
-        <div class="testimonials" id="testimonials">
-            <!-- Existing testimonials -->
+        <h2> Know Us</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <p>"OnlyDesigns made my presentation shine! The designs were professional and unique. Highly recommended."</p>
+                <div class="author">- Sarah J.</div>
+            </div>
+            <div class="testimonial">
+                <p>"I loved the custom assignments! They delivered exactly what I needed, and the quality was top-notch."</p>
+                <div class="author">- Michael K.</div>
+            </div>
+            <div class="testimonial">
+                <p>"Fantastic service! The team is very responsive, and the mindmaps they created were incredibly engaging."</p>
+                <div class="author">- Priya R.</div>
+            </div>
+            <div class="testimonial">
+                <p>"Great experience! The attention to detail in their work is amazing. My teacher was very impressed."</p>
+                <div class="author">- David L.</div>
+            </div>
+            <div class="testimonial">
+                <p>"I've used OnlyDesigns multiple times for my projects, and they never disappoint. Superb quality!"</p>
+                <div class="author">- Aisha T.</div>
+            </div>
         </div>
-        <h2>Add Your Review</h2>
-        <form id="reviewForm">
-            <input type="text" id="nameInput" placeholder="Your Name" required>
-            <textarea id="reviewInput" placeholder="Write your review here..." required></textarea>
-            <button type="submit">Submit</button>
-        </form>
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Main Page</a>
     </section>
 
     <footer>
         <p>&copy; 2024 OnlyDesigns. All Rights Reserved.</p>
     </footer>
-
-    <script>
-        const testimonialsDiv = document.getElementById("testimonials");
-        const reviewForm = document.getElementById("reviewForm");
-        const nameInput = document.getElementById("nameInput");
-        const reviewInput = document.getElementById("reviewInput");
-
-        // Load testimonials from local storage
-        function loadTestimonials() {
-            const testimonials = JSON.parse(localStorage.getItem("testimonials")) || [];
-            testimonialsDiv.innerHTML = ""; // Clear existing reviews
-            testimonials.forEach((testimonial, index) => {
-                addTestimonialToDOM(testimonial, index);
-            });
-        }
-
-        // Add testimonial to DOM
-        function addTestimonialToDOM(testimonial, index) {
-            const testimonialDiv = document.createElement("div");
-            testimonialDiv.classList.add("testimonial");
-            testimonialDiv.innerHTML = `
-                <p>"${testimonial.review}"</p>
-                <div class="author">- ${testimonial.name}</div>
-                <button class="delete-btn" onclick="deleteTestimonial(${index})">Delete</button>
-            `;
-            testimonialsDiv.appendChild(testimonialDiv);
-        }
-
-        // Add a new testimonial
-        reviewForm.addEventListener("submit", (e) => {
-            e.preventDefault();
-            const name = nameInput.value.trim();
-            const review = reviewInput.value.trim();
-            if (name && review) {
-                const testimonials = JSON.parse(localStorage.getItem("testimonials")) || [];
-                testimonials.unshift({ name, review }); // Add new testimonial to the beginning
-                localStorage.setItem("testimonials", JSON.stringify(testimonials));
-                loadTestimonials();
-                reviewForm.reset();
-            }
-        });
-
-        // Delete a testimonial
-        function deleteTestimonial(index) {
-            const testimonials = JSON.parse(localStorage.getItem("testimonials")) || [];
-            testimonials.splice(index, 1); // Remove the testimonial at the specified index
-            localStorage.setItem("testimonials", JSON.stringify(testimonials));
-            loadTestimonials();
-        }
-
-        // Initial load
-        loadTestimonials();
-    </script>
 </body>
 </html>
